@@ -56,7 +56,7 @@ export const startUpdateBaseFilter = (baseFilter) => {
     }
 }
 
-const searchByText = (searchText, dispatch) => {
+export const searchByText = (searchText, dispatch) => {
     return new Promise(resolve => {
         dispatch({
             type: 'SET_SEARCH_TEXT',
@@ -74,7 +74,7 @@ export const startSearchByText = (searchText) => {
     }
 }
 
-const updatePageNum = (firstResult, dispatch) => {
+export const updatePageNum = (firstResult, dispatch) => {
     return new Promise(resolve => {
         dispatch({
             type: 'UPDATE_FIRST_RESULT',
