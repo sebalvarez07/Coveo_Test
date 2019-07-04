@@ -1,0 +1,24 @@
+html {
+    font-size: 62.5%;    // The idea is that 16 * 625 = 10 (10px = 1rem) --> so if we say 2rem = 20px
+}
+
+body {
+    font-family: $font-main;
+    font-size: $font-size-sm;
+    color: $black;
+    line-height: 1.6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render dashboard page page 1`] = `
+<div
+  className="wrapper"
+>
+  <Connect(Header) />
+  <Sidebar />
+  <Connect(MainContainer) />
+</div>
+`;

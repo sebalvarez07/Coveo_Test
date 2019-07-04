@@ -1,0 +1,31 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+$sidebar-width-lg: 31rem;
+$header-height-lg: 100px;
+
+.sidebar {
+    position: absolute;
+    width: $sidebar-width-lg;
+    height: calc(100vh - #{$header-height-lg});
+    left: 0;
+    top: 100px;
+    padding: 3.5rem 2.5rem;
+    background: $white;
+    overflow-y: scroll;
+}
+
+.main-container {
+    position: absolute;
+    width: calc(100% - #{$sidebar-width-lg});
+    height: calc(100vh - #{$header-height-lg});
+    overflow-y: scroll;
+    top: 100px;
+    right: 0;
+    background: $grey-lighter;
+    padding: 5rem;
+}

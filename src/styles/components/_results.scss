@@ -1,0 +1,77 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -2rem;
+    margin-right: -2rem;
+}
+
+.result-card {
+    width: 33.333%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(xl) {
+        width: 25%;
+    }
+}
+
+.result-card__content {
+    cursor: pointer;
+    color: $black;
+    text-decoration: none;
+    background: $white;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 6rem;
+    position: relative;
+}
+
+.result__tl {
+    font-size: $font-size-sm;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-family: $font-fency;
+}
+
+.result__img {
+    height: 18rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.price-tag {
+    margin-top: 1rem;
+    display: block;
+    background: fade-out($yellow, 0.7);
+    color: $black;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    font-size: $font-size-sm;
+    text-align: center;
+}
+
+.learn-more {
+    height: 4rem;
+    background: $black;
+    display: inline-block;
+    color: $white;
+    font-size: $font-size-sm;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.results-action {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

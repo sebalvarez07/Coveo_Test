@@ -1,0 +1,23 @@
+.pagination {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+
+.pagination__btn {
+    background: transparent;
+    border-radius: 0;
+    font-size: $font-size-sm;
+    color: $black;
+    display: inline-block;
+    padding: .5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: none;
+    width: 2.8rem;
+
+    &.active-page {
+        background: $black;
+        color: $white;
+    }
+}

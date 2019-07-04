@@ -1,0 +1,99 @@
+.sidebar__group {
+    display: block;
+    margin-bottom: 2rem;
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: solid 1px $black;
+}
+
+.group__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.clear-btn {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.group__tl {
+    display: block;
+}
+
+.check__container {
+    display: block;
+    position: relative;
+    font-size: $font-size-sm;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-left: 3rem;
+    margin-bottom: .5rem;
+    cursor: pointer;
+}
+
+.check__container .custom__checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1.7rem;
+    width: 1.7rem;
+    border: solid 1px $black;
+    background-color: $white;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+/* On mouse-over, add a grey background color */
+.check__container:hover .custom__checkbox ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check__container .custom__checkbox:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark .ionicons {
+    content: "";
+    position: absolute;
+    display: none;
+    color: $white;
+    transition: all 0.5s ease;
+}
+
+/* Show the checkmark when checked */
+.check__container .custom__checkbox:checked ~ .checkmark .ionicons {
+    display: block;
+}
+
+.more_less__group {
+    padding-top: 1rem;
+    color: $grey;
+    font-size: $font-size-sm;
+}
+
+.more_less__btn {
+    background: none;
+    border: none;
+    color: $grey;
+    font-size: $font-size-sm;
+    display: inline-block;
+}
