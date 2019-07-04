@@ -6,10 +6,23 @@ import SliderComponent from './Slider';
 const defaultValues = [0, 300];
 
 class PriceSlider extends React.Component {
+
+    constructor(props) {
+      super(props);
+    }
+
     state = {
       domain: [0, 300],
       values: defaultValues.slice(),
       update: defaultValues.slice()
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+      if(nextProps.baseFilter !== this.props.baseFilter) {
+          this.setState({
+            values: defaultValues
+          })           
+      }
     }
 
     onUpdate = update => {
@@ -49,10 +62,16 @@ class PriceSlider extends React.Component {
     }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    baseFilter: state.filters.baseFilter,
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         startUpdateCategory: (group, update) => dispatch(startUpdateCategory(group, update)),
     }
 }
  
-export default connect(undefined, mapDispatchToProps)(PriceSlider);
+export default connect(mapStateToProps, mapDispatchToProps)(PriceSlider);
