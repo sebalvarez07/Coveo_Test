@@ -14,6 +14,9 @@ export const FilterControlUI = (props) => {
 
     return (
         <div className='filter-controlUI'>
+            <h4 className='current-viewing'>
+                Currently Viewing: {props.baseFilter.join(' & ')}
+            </h4>
             {
                 Object.keys(props.filtersActive).map(category => {
                     if(props.filtersActive[`${category}`].values.length > 0) {
@@ -45,6 +48,7 @@ export const FilterControlUI = (props) => {
 const mapStateToProps = (state) => (
     {
         filtersActive: state.filters.categories,
+        baseFilter: state.filters.baseFilter
     }
 );
 
