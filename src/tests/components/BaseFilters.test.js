@@ -14,7 +14,7 @@ test('Should render base filters', () => {
 });
 
 test('Should handle startUpdateBaseFilter when beer filter is clicked', () => {
-    // simulate mouseDonw and pass the fake element's object 
+    // simulate mouseDown and pass the fake element's object 
     wrapper.find('#beerFilter').simulate('mouseDown', {
         preventDefault: () => {},
         target: {
@@ -28,7 +28,7 @@ test('Should handle startUpdateBaseFilter when beer filter is clicked', () => {
 });
 
 test('Should handle startUpdateBaseFilter when wine filter is clicked', () => {
-    // simulate mouseDonw and pass the fake element's object 
+    // simulate mouseDown and pass the fake element's object 
     wrapper.find('#wineFilter').simulate('mouseDown', {
         preventDefault: () => {},
         target: {
@@ -40,3 +40,4 @@ test('Should handle startUpdateBaseFilter when wine filter is clicked', () => {
 
     expect(startUpdateBaseFilter).toHaveBeenLastCalledWith(['Bière']);
 });
+

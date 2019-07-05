@@ -5,7 +5,7 @@ import { groupMap } from '../fixtures/helpers';
 
 const defaultLimit = 5;
 
-class FilterItem extends React.Component {
+export class FilterItem extends React.Component {
 
     constructor(props) {
         super(props);
@@ -15,7 +15,7 @@ class FilterItem extends React.Component {
             valueLimit: defaultLimit
         }
     }
-
+ 
     componentWillMount () {
         this.checkBoxes = this.props.filter.map(option => option.value);
     }
@@ -38,7 +38,7 @@ class FilterItem extends React.Component {
             }
         });     
     }
-
+ 
     handleChange = (e) => {
         const item = e.target.name;
         const isChecked = e.target.checked;
@@ -90,14 +90,18 @@ class FilterItem extends React.Component {
         return this.checkedItems.size > this.state.valueLimit ? this.checkedItems.size : this.state.valueLimit;
     }
 
-    renderCheckBox = (checkName) => {        
+    renderCheckBox = (checkName) => {       
+
+        let id_gen = checkName.toLowerCase().split(' ');
+        id_gen = `${id_gen[0]}-${id_gen[1]}`;
+
         return (
             <label className='check__container' key={`${checkName}`}>
                 {`${checkName}`}
                 <input 
                     className='custom__checkbox'
-                    style={{ display: 'block' }} 
                     type='checkbox' 
+                    id={id_gen}
                     name={`${checkName}`} 
                     checked={this.checkedItems.has(checkName)}
                     onChange={this.handleChange} 
@@ -129,20 +133,20 @@ class FilterItem extends React.Component {
                 
                 <div className='more_less__group'>
                     { this.state.valueLimit <= this.props.filter.length && 
-                        <React.Fragment>
+                        <span>
                             <button 
-                                className='more_less__btn'
+                                className='more_less__btn more-btn'
                                 name={'more'}
                                 onMouseDown={this.handleValueLimit}
                                 >
                                 Show More
                             </button>
                             <span> | </span>
-                        </React.Fragment>
+                        </span>
                     }
                     { this.props.filter.length >= defaultLimit && 
                         <button 
-                            className='more_less__btn'
+                            className='more_less__btn less-btn'
                             name={'less'}
                             onMouseDown={this.handleValueLimit}
                             >

@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render base filters 1`] = `
+<div
+  className="sidebar__group"
+>
+  <div
+    className="group__header"
+  >
+    <h3
+      className="group__tl"
+    >
+      Categorie
+    </h3>
+    <span
+      className="clear-btn"
+      onMouseDown={[Function]}
+    >
+      Clear All
+    </span>
+  </div>
+  <label
+    className="check__container"
+    key="Vin rouge"
+  >
+    Vin rouge
+    <input
+      checked={false}
+      className="custom__checkbox"
+      id="vin-rouge"
+      name="Vin rouge"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="checkmark"
+    >
+      <i
+        className="ionicons ion-checkmark"
+      />
+    </span>
+  </label>
+  <label
+    className="check__container"
+    key="Vin blanc"
+  >
+    Vin blanc
+    <input
+      checked={false}
+      className="custom__checkbox"
+      id="vin-blanc"
+      name="Vin blanc"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="checkmark"
+    >
+      <i
+        className="ionicons ion-checkmark"
+      />
+    </span>
+  </label>
+  <label
+    className="check__container"
+    key="Vin rosé"
+  >
+    Vin rosé
+    <input
+      checked={false}
+      className="custom__checkbox"
+      id="vin-rosé"
+      name="Vin rosé"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="checkmark"
+    >
+      <i
+        className="ionicons ion-checkmark"
+      />
+    </span>
+  </label>
+  <label
+    className="check__container"
+    key="Vin mousseux"
+  >
+    Vin mousseux
+    <input
+      checked={false}
+      className="custom__checkbox"
+      id="vin-mousseux"
+      name="Vin mousseux"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="checkmark"
+    >
+      <i
+        className="ionicons ion-checkmark"
+      />
+    </span>
+  </label>
+  <label
+    className="check__container"
+    key="Vin lala"
+  >
+    Vin lala
+    <input
+      checked={false}
+      className="custom__checkbox"
+      id="vin-lala"
+      name="Vin lala"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="checkmark"
+    >
+      <i
+        className="ionicons ion-checkmark"
+      />
+    </span>
+  </label>
+  <div
+    className="more_less__group"
+  >
+    <span>
+      <button
+        className="more_less__btn more-btn"
+        name="more"
+        onMouseDown={[Function]}
+      >
+        Show More
+      </button>
+      <span>
+         | 
+      </span>
+    </span>
+    <button
+      className="more_less__btn less-btn"
+      name="less"
+      onMouseDown={[Function]}
+    >
+      Show Less
+    </button>
+  </div>
+</div>
+`;
