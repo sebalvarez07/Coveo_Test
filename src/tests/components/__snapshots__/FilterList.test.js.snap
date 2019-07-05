@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render base filters 1`] = `
+<div>
+  <Connect(FilterItem)
+    filter={
+      Array [
+        Object {
+          "numberOfResults": 6031,
+          "value": "Vin rouge",
+        },
+        Object {
+          "numberOfResults": 2906,
+          "value": "Vin blanc",
+        },
+        Object {
+          "numberOfResults": 277,
+          "value": "Vin rosé",
+        },
+      ]
+    }
+    filterName="tpcategorie"
+    key="tpcategorie"
+  />
+  <Connect(FilterItem)
+    filter={
+      Array [
+        Object {
+          "numberOfResults": 10842,
+          "value": "750 ml",
+        },
+        Object {
+          "numberOfResults": 654,
+          "value": "700 ml",
+        },
+      ]
+    }
+    filterName="tpformat"
+    key="tpformat"
+  />
+</div>
+`;

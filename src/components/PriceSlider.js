@@ -5,7 +5,7 @@ import SliderComponent from './Slider';
 
 const defaultValues = [0, 300];
 
-class PriceSlider extends React.Component {
+export class PriceSlider extends React.Component {
 
     constructor(props) {
       super(props);

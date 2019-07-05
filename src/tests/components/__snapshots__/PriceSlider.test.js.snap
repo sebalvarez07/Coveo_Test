@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render base filters 1`] = `
+<div
+  className="price-slider header__el"
+>
+  <span
+    className="price-slider__tl"
+  >
+    Price Range
+  </span>
+  <SliderComponent
+    domain={
+      Array [
+        0,
+        300,
+      ]
+    }
+    onChange={[Function]}
+    onUpdate={[Function]}
+    update={
+      Array [
+        0,
+        300,
+      ]
+    }
+    values={
+      Array [
+        0,
+        300,
+      ]
+    }
+  />
+  <span
+    className="price-slider__current-range"
+  >
+    0 $ - 300 $
+  </span>
+</div>
+`;
