@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { startUpdatePageNum } from '../actions/filters';
  
-const Pagination = (props) => {
+export const Pagination = (props) => {
 
     // Set all pagination variables 
     const numberOfPages = Math.ceil(props.totalResults / props.numberOfResults);
@@ -38,11 +38,11 @@ const Pagination = (props) => {
     }
     
     // Button component for all pagination buttons
-    const PaginationButton = ({pageNum, displayVal = pageNum, customClass}) => {
+    const PaginationButton = ({pageNum, displayVal = pageNum, className, onMouseDown}) => {
         return (
             <button
-                className={`pagination__btn ${customClass} ${pageNum === currentPage ? 'active-page' : ''}`}
-                onMouseDown={handlePageNumber}  
+                className={`pagination__btn ${className} ${pageNum === currentPage ? 'active-page' : ''}`}
+                onMouseDown={onMouseDown}  
                 data-target={pageNum}
             >
                 {displayVal}
@@ -53,38 +53,35 @@ const Pagination = (props) => {
     // Populate array with page numbers
     let pages = setPages();
 
-
     return (
-        
         <div className='pagination'>
             {
                 currentPage > 1 &&
-                <PaginationButton pageNum={currentPage - 1} displayVal={'Prev'} customClass={'next-prev-btn'}/>
+                <PaginationButton onMouseDown={handlePageNumber} pageNum={currentPage - 1} displayVal={'Prev'} className={'next-prev-btn prev-btn'}/>
             }
             {
                 (currentPage > 4) &&
-                <PaginationButton pageNum={1} displayVal={'1...'} customClass={'next-prev-btn'}/>
+                <PaginationButton onMouseDown={handlePageNumber} pageNum={1} displayVal={'1...'} className={'next-prev-btn pagination-1'}/>
             }
             {
                 numberOfPages > 1 &&
                 pages.map(page => {
-                  return <PaginationButton key={page} pageNum={page} customClass={'page-btn'}/>
+                  return <PaginationButton onMouseDown={handlePageNumber} key={page} pageNum={page} className={`page-btn pagination-${page}`}/>
                 })
             }
             {
                 currentPage < numberOfPages &&
-                <PaginationButton pageNum={currentPage + 1} displayVal={'Next'} customClass={'next-prev-btn'}/>
+                <PaginationButton onMouseDown={handlePageNumber} pageNum={currentPage + 1} displayVal={'Next'} className={'next-prev-btn next-btn'}/>
             }
         </div>
     )
 }
-
+ 
 const mapStateToProps = (state) => (
     {
         totalResults: state.content.resultsCount,
         numberOfResults: state.filters.numberOfResults,
         firstResult: state.filters.firstResult
-        
     }
 );
 

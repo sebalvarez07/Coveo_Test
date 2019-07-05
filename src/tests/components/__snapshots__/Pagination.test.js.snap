@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render base filters 1`] = `
+<div
+  className="pagination"
+>
+  <PaginationButton
+    className="next-prev-btn prev-btn"
+    displayVal="Prev"
+    onMouseDown={[Function]}
+    pageNum={2}
+  />
+  <PaginationButton
+    className="page-btn pagination-1"
+    key="1"
+    onMouseDown={[Function]}
+    pageNum={1}
+  />
+  <PaginationButton
+    className="page-btn pagination-2"
+    key="2"
+    onMouseDown={[Function]}
+    pageNum={2}
+  />
+  <PaginationButton
+    className="page-btn pagination-3"
+    key="3"
+    onMouseDown={[Function]}
+    pageNum={3}
+  />
+  <PaginationButton
+    className="page-btn pagination-4"
+    key="4"
+    onMouseDown={[Function]}
+    pageNum={4}
+  />
+  <PaginationButton
+    className="page-btn pagination-5"
+    key="5"
+    onMouseDown={[Function]}
+    pageNum={5}
+  />
+  <PaginationButton
+    className="next-prev-btn next-btn"
+    displayVal="Next"
+    onMouseDown={[Function]}
+    pageNum={4}
+  />
+</div>
+`;
