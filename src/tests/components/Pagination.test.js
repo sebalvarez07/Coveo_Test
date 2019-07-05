@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Pagination } from '../../components/Pagination';
-import { contentEx } from '../fixtures/content';
 
 let wrapper, totalResults, numberOfResults, firstResult, startUpdatePageNum;
 

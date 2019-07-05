@@ -74,6 +74,14 @@ const filterReducer = (state = filterDefault, action) => {
                 firstResult: 0,
                 resultsNum: action.numberOfResults
             };
+        case 'REMOVE_FILTER_VALUE': 
+            let updatedValues = categories[action.group].values.filter(value => value !== action.value);
+            categories[action.group].values = updatedValues;
+            return {
+                ...state,
+                categories
+            }
+
         default:
             return state;
     }

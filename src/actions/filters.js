@@ -91,3 +91,22 @@ export const startUpdatePageNum = (firstResult) => {
         })
     }
 }
+
+export const removeFilterValue = (group, value, dispatch) => {
+    return new Promise(resolve => {
+        dispatch({
+            type: 'REMOVE_FILTER_VALUE',
+            group,
+            value
+        });
+        resolve();
+    });
+}
+
+export const startRemoveFilterValue = (group, value) => {
+    return dispatch => {
+        removeFilterValue(group, value, dispatch).then(res => {
+            dispatch(startSetContent());
+        })
+    }
+}

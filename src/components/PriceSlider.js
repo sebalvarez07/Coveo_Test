@@ -18,7 +18,7 @@ export class PriceSlider extends React.Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-      if(nextProps.baseFilter !== this.props.baseFilter) {
+      if(nextProps.priceFilterVal !== this.props.priceFilterVal && nextProps.priceFilterVal.length === 0) {
           this.setState({
             values: defaultValues
           })           
@@ -65,6 +65,7 @@ export class PriceSlider extends React.Component {
 const mapStateToProps = (state) => {
   return {
     baseFilter: state.filters.baseFilter,
+    priceFilterVal: state.filters.categories.tpprixnum.values,
   }
 }
 

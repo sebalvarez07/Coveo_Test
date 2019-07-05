@@ -6,3 +6,4 @@ groupMap.set('tpcategorie', 'Categorie');
 groupMap.set('tppays', 'Pays');
 groupMap.set('tpformat', 'Format');
 groupMap.set('tpcouleur', 'Couleur');
+groupMap.set('tpprixnum', 'Prix');

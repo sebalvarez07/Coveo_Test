@@ -1,28 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ResultCard from './ResultCard';
+import ResultCardList from './ResultCardList';
 import Pagination from './Pagination';
- 
+import FilterControlUI from './FilterControlUI';
+
 const MainContainer = (props) => {
 
     const showingResults = `Showing results ${props.firstResult} - ${props.firstResult + props.numberOfResults}`;
 
     return (
         <div className='main-container'>
-            <div className='results-info'>
-                <div>Total number of results <strong>{props.totalResults}</strong></div>
-                <div>{showingResults}</div>
-                <Pagination />
+            <div className='filterUI-resInfo'>
+                <FilterControlUI />
+                <div className='results-info'>
+                    <div>Total number of results <strong>{props.totalResults}</strong></div>
+                    <div>{showingResults}</div>
+                    <Pagination />
+                </div>
             </div>
-            <div className='card-container'>
-                {
-                    props.results.map(result => {
-                        return (
-                            <ResultCard key={result.uniqueId} result={result}/>
-                        )
-                    })
-                }
-            </div>
+            
+
+            
+            <ResultCardList />
             <Pagination />
         </div>
     )
@@ -32,8 +31,7 @@ const mapStateToProps = (state) => (
     {
         totalResults: state.content.resultsCount,
         numberOfResults: state.filters.numberOfResults,
-        firstResult: state.filters.firstResult,
-        results: state.content.results,
+        firstResult: state.filters.firstResult
     }
 );
 
