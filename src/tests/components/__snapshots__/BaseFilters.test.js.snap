@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render base filters 1`] = `
+<div
+  className="base-filter header__el"
+>
+  <span
+    className="base-filter__btn active-base"
+    id="beerFilter"
+    onMouseDown={[Function]}
+  >
+    <i
+      className="ionicons ion-ios-pint"
+    />
+    <span
+      className="base-filter__label"
+    >
+      Beer
+    </span>
+  </span>
+  <span
+    className="base-filter__btn active-base"
+    id="wineFilter"
+    onMouseDown={[Function]}
+  >
+    <i
+      className="ionicons ion-ios-wineglass"
+    />
+    <span
+      className="base-filter__label"
+    >
+      Wine
+    </span>
+  </span>
+</div>
+`;

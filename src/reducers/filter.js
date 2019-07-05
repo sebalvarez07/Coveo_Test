@@ -30,9 +30,9 @@ export const filterDefault = {
     firstResult: 0,
     numberOfResults: 10
 } 
-
+ 
 const filterReducer = (state = filterDefault, action) => {
-    const categories = {...state['categories']};
+    const categories = {...state.categories};
 
     switch(action.type) {
         case 'SET_SEARCH_TEXT':
@@ -42,21 +42,21 @@ const filterReducer = (state = filterDefault, action) => {
                 searchText: action.searchText
             };
         case 'UPDATE_CATEGORY':
-            categories[action.group]['values'] = action.categoryUpdate;
+            categories[action.group].values = action.categoryUpdate;
             return {
                 ...state,
                 firstResult: 0,
                 categories: categories
             };
         case 'UPDATE_CATEGORY_MAX_VALUE_NUM':
-            categories[action.group]['maxValueNum'] = action.maxValueNum;
+            categories[action.group].maxValueNum = action.maxValueNum;
             return {
                 ...state,
                 categories: categories
             };
         case 'UPDATE_BASE_FILTER':
             // Clear all filters
-            Object.keys(categories).forEach(categorie => categories[categorie]['values'] = [])
+            Object.keys(categories).forEach(categorie => categories[categorie].values = [])
             return {
                 ...state,
                 firstResult: 0,

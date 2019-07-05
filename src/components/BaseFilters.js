@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { startUpdateBaseFilter } from '../actions/filters';
 
-class BaseFilters extends React.Component {
+export class BaseFilters extends React.Component {
 
     constructor (props) {
         super(props);
@@ -43,7 +43,7 @@ class BaseFilters extends React.Component {
     }
 
     handleBaseFilter = (e) => {
-        e.preventDefault();
+        e.preventDefault(); 
         const btn = e.target.closest('.base-filter__btn');
 
         if(btn.id === 'beerFilter') {

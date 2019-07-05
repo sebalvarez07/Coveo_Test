@@ -4,7 +4,7 @@ exports[`Should render dashboard page page 1`] = `
 <div
   className="wrapper"
 >
-  <Connect(Header) />
+  <Header />
   <Sidebar />
   <Connect(MainContainer) />
 </div>
